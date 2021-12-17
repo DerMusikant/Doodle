@@ -4,16 +4,14 @@
 *{
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 body {
   font-family: 'Short Stack', cursive;
-  font-size: 2.5rem;
 }
 
 
-/* ------------------------HEADER START---------------------- */
+/* ------------------------HEADER---------------------- */
 
 
 header {
@@ -23,6 +21,10 @@ header {
   justify-content:space-around;
   position: sticky;
   top: 0;
+}
+
+.logo{
+  text-decoration: none;
 }
 
 nav {
@@ -36,27 +38,53 @@ nav {
   justify-content: space-around;
 }
 
-nav a{
-  margin: 0 5px;
+.navbar a{
+  text-decoration: none;
 }
 
-/* -----------------------HEADER END ------------------ */
+.navbar a:hover{
+  text-decoration:underline;
+}
 
-/* -------------------------MAIN START ------------------- */
+
+/* -------------------------MAIN ------------------- */
+
+hr{
+  margin: 10px 0;
+}
 
 main{
-  height: 4000px;
+  height: 20000px;
 }
 
 
-/* --------------------------------MAIN END ------------------------------ */
-
-/* -----------------------------HOME START ------------------------------ */
-
+/* -----------------------------HOME ------------------------------ */
 
 .home{
+  display: grid;
+}
+
+.home div{
+  height: 500px;
 }
 
 
 
-/* --------------------------------HOME END ------------------------------- */
+
+
+
+
+
+
+/* ---------------------------LANDSCAPE MEDIA QUERY--------------------------- */
+
+@media (min-width: 768px) {
+
+  body{
+    font-size: 1.5rem;
+  }
+
+  .home{
+    grid-template-columns: 50% 50%;
+  }
+}
